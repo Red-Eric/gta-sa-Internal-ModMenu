@@ -39,9 +39,6 @@
     <ClCompile Include="src\Entity\player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hook\minh.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\hook\threadEx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -92,9 +89,6 @@
     <ClInclude Include="minHook\include\MinHook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\hook\minh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\hook\threadEx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -122,8 +116,15 @@
     <ClInclude Include="imGui\imstb_truetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Detour\include\detours.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="minHook\lib\libMinHook.x86.lib" />
+    <Library Include="Detour\lib\detours.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Detour\lib\detours.pdb" />
   </ItemGroup>
 </Project>

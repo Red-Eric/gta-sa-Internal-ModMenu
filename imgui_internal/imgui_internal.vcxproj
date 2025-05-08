@@ -76,13 +76,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;IMGUI_DISABLE_OBSOLETE_FUNCTIONS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\imGui;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\imGui;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\Detour\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;libMinHook.x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\Detour\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;libMinHook.x86.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -93,15 +94,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;IMGUI_DISABLE_OBSOLETE_FUNCTIONS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\imGui;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\imGui;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\Detour\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;libMinHook.x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\NULL\source\repos\imgui_internal\imgui_internal\minHook\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Users\NULL\source\repos\imgui_internal\imgui_internal\Detour\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;libMinHook.x86.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -151,13 +153,13 @@
     <ClCompile Include="src\Global\global.cpp" />
     <ClCompile Include="src\hook\health.cpp" />
     <ClCompile Include="src\hook\hook.cpp" />
-    <ClCompile Include="src\hook\minh.cpp" />
     <ClCompile Include="src\hook\threadEx.cpp" />
     <ClCompile Include="src\Memory\mem.cpp" />
     <ClCompile Include="src\NameSpace\cheat.cpp" />
     <ClCompile Include="src\NameSpace\stat.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Detour\include\detours.h" />
     <ClInclude Include="imGui\imconfig.h" />
     <ClInclude Include="imGui\imgui.h" />
     <ClInclude Include="imGui\imgui_impl_dx9.h" />
@@ -171,14 +173,17 @@
     <ClInclude Include="src\Global\global.h" />
     <ClInclude Include="src\hook\health.h" />
     <ClInclude Include="src\hook\hook.h" />
-    <ClInclude Include="src\hook\minh.h" />
     <ClInclude Include="src\hook\threadEx.h" />
     <ClInclude Include="src\Memory\mem.h" />
     <ClInclude Include="src\NameSpace\cheat.h" />
     <ClInclude Include="src\NameSpace\stat.h" />
   </ItemGroup>
   <ItemGroup>
+    <Library Include="Detour\lib\detours.lib" />
     <Library Include="minHook\lib\libMinHook.x86.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Detour\lib\detours.pdb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
