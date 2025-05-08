@@ -63,6 +63,15 @@
     <ClCompile Include="imGui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\d9hook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menuToggle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frontEnd\frontEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NameSpace\cheat.h">
@@ -117,6 +126,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Detour\include\detours.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\d9hook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menuToggle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontEnd\frontEnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
