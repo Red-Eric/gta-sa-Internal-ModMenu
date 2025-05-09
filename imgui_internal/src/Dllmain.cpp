@@ -11,6 +11,7 @@ DWORD __stdcall EjectThread(LPVOID) {
     return 0;
 }
 
+
 DWORD WINAPI Menue(HINSTANCE hModule) {
     AllocConsole();
     FILE* fp;

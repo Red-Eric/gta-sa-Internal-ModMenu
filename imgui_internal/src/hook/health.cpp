@@ -6,7 +6,7 @@ float* playerHealthAddrs = (float*)getPointerAddress((gameBase + 0x76F3B8), { 0x
 
 // [400000+76F3B8]+540
 
-__declspec(naked) void ourfunc() {
+__declspec(naked) void healthHookFunction() {
 	
 	__asm {
 		cmp dword ptr [esi+0x544], 0x43300000
@@ -22,7 +22,7 @@ __declspec(naked) void ourfunc() {
 
 void healthHook::ON()
 {
-	Hook((void*)healthHookAddrss, ourfunc, 6);
+	Hook((void*)healthHookAddrss, healthHookFunction, 6);
 	system("cls");
 	std::cout << "Health Hook ON" << std::endl;
 }

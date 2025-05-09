@@ -152,9 +152,11 @@
     <ClCompile Include="src\Dllmain.cpp" />
     <ClCompile Include="src\Entity\player.cpp" />
     <ClCompile Include="src\frontEnd\frontEnd.cpp" />
+    <ClCompile Include="src\function\func.cpp" />
     <ClCompile Include="src\Global\global.cpp" />
     <ClCompile Include="src\hook\health.cpp" />
     <ClCompile Include="src\hook\hook.cpp" />
+    <ClCompile Include="src\hook\oneHitCar.cpp" />
     <ClCompile Include="src\hook\threadEx.cpp" />
     <ClCompile Include="src\Memory\mem.cpp" />
     <ClCompile Include="src\menuToggle.cpp" />
@@ -175,9 +177,11 @@
     <ClInclude Include="src\d9hook.h" />
     <ClInclude Include="src\Entity\player.h" />
     <ClInclude Include="src\frontEnd\frontEnd.h" />
+    <ClInclude Include="src\function\func.h" />
     <ClInclude Include="src\Global\global.h" />
     <ClInclude Include="src\hook\health.h" />
     <ClInclude Include="src\hook\hook.h" />
+    <ClInclude Include="src\hook\oneHitCar.h" />
     <ClInclude Include="src\hook\threadEx.h" />
     <ClInclude Include="src\Memory\mem.h" />
     <ClInclude Include="src\menuToggle.h" />

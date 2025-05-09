@@ -4,7 +4,7 @@
 #include "../Memory/mem.h"
 #include <iostream>
 
-void ourfunc();
+void healthHookFunction();
 
 namespace healthHook {
 	void ON();

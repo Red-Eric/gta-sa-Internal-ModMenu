@@ -72,6 +72,12 @@
     <ClCompile Include="src\frontEnd\frontEnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\function\func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hook\oneHitCar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NameSpace\cheat.h">
@@ -137,9 +143,14 @@
     <ClInclude Include="src\frontEnd\frontEnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\function\func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hook\oneHitCar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="minHook\lib\libMinHook.x86.lib" />
     <Library Include="Detour\lib\detours.lib" />
   </ItemGroup>
   <ItemGroup>
