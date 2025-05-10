@@ -148,7 +148,6 @@
     <ClCompile Include="imGui\imgui_impl_win32.cpp" />
     <ClCompile Include="imGui\imgui_tables.cpp" />
     <ClCompile Include="imGui\imgui_widgets.cpp" />
-    <ClCompile Include="src\d9hook.cpp" />
     <ClCompile Include="src\Dllmain.cpp" />
     <ClCompile Include="src\Entity\player.cpp" />
     <ClCompile Include="src\frontEnd\frontEnd.cpp" />
@@ -159,7 +158,6 @@
     <ClCompile Include="src\hook\oneHitCar.cpp" />
     <ClCompile Include="src\hook\threadEx.cpp" />
     <ClCompile Include="src\Memory\mem.cpp" />
-    <ClCompile Include="src\menuToggle.cpp" />
     <ClCompile Include="src\NameSpace\cheat.cpp" />
     <ClCompile Include="src\NameSpace\stat.cpp" />
   </ItemGroup>
@@ -174,7 +172,6 @@
     <ClInclude Include="imGui\imstb_textedit.h" />
     <ClInclude Include="imGui\imstb_truetype.h" />
     <ClInclude Include="minHook\include\MinHook.h" />
-    <ClInclude Include="src\d9hook.h" />
     <ClInclude Include="src\Entity\player.h" />
     <ClInclude Include="src\frontEnd\frontEnd.h" />
     <ClInclude Include="src\function\func.h" />
@@ -184,7 +181,6 @@
     <ClInclude Include="src\hook\oneHitCar.h" />
     <ClInclude Include="src\hook\threadEx.h" />
     <ClInclude Include="src\Memory\mem.h" />
-    <ClInclude Include="src\menuToggle.h" />
     <ClInclude Include="src\NameSpace\cheat.h" />
     <ClInclude Include="src\NameSpace\stat.h" />
   </ItemGroup>

@@ -5,14 +5,19 @@ uintptr_t jumbBack = carShootAddrs + 0x06;
 
 __declspec(naked) void oneHitCarHookFunc() {
 	__asm {
-		cmp edi, [0xb6f3b8]
-		je exitOneHitHook
-		onehitk:
-			fstp dword ptr[esi + 0x4C0]
-			mov dword ptr[esi + 0x4C0],0x0
+		push eax
+		mov eax, [0xB6F3B8]
+		mov eax, [eax]          
+		cmp edi, eax            
+		jne exitOneHitHook
 
-		exitOneHitHook:
-			jmp [jumbBack]
+		onehitk :
+		fstp dword ptr[esi + 0x4C0]
+			mov dword ptr[esi + 0x4C0], 0x0
+
+		exitOneHitHook :
+			pop eax
+			jmp[jumbBack]
 	}
 }
 
