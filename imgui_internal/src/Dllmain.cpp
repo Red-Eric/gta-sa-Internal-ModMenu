@@ -12,6 +12,8 @@
 
 #include "detours.h"
 #include "frontEnd/frontEnd.h"
+#include "hook/health.h"
+#include "hook/speed.h"
 
 HINSTANCE DllHandle;
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -120,6 +122,9 @@ DWORD WINAPI Menue(HINSTANCE hModule) {
         if (GetAsyncKeyState(VK_F12) & 0x8000) {
             HWND hWnd = GetForegroundWindow();
             SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG_PTR)oWndProc);
+            healthHook::OFF();
+            speedPlayerFuncToogle::OFF();
+            flyToogle::OFF();
             DetourRemove((PBYTE)pEndScene, (PBYTE)hookedEndScene);
             DetourRemove((PBYTE)oSetCursorPos, (PBYTE)hkSetCursorPos);
             break;

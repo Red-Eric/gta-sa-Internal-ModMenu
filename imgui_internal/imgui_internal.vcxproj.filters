@@ -69,7 +69,10 @@
     <ClCompile Include="src\function\func.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\hook\oneHitCar.cpp">
+    <ClCompile Include="src\hook\speed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frontEnd\all.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -134,7 +137,10 @@
     <ClInclude Include="src\function\func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\hook\oneHitCar.h">
+    <ClInclude Include="src\hook\speed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frontEnd\all.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
